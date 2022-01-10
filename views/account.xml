@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+     <record id="inherit_account_move_bal" model="ir.ui.view">
+        <field name="name">Account Move</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="account.view_move_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='team_id']" position="after">
+                <field name="net_amount_jan"/>
+                <field name="net_amount_jan_arabic"/>
+                <field name="discount_comma"/>
+                <field name="advance_comma"/>
+                <field name="vat_amount_comma"/>
+                <field name="net_amount_with_comma"/>
+            </xpath>
+        </field>
+     </record>
+
+</odoo>
